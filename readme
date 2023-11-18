@@ -6,3 +6,6 @@ Some Texts were provided in the "Texts" folder to test training. You can add you
 You may have to restart the program to see the new model.
 
 Run the code by running UI.py
+
+The code's purpose is to use gpt-2 to generate completions. Right now it supports normal completions, the absolute worst completions
+#and the worst coherent completions. The code can also train a new model using any text file.

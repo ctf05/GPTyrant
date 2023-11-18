@@ -1,5 +1,8 @@
 torch~=2.1.1+cu118
+#For windows use the following line
 #pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#Else go here https://pytorch.org/get-started/locally/
+#(or for any other torch installation problem)
 
 transformers~=4.35.0
 nltk~=3.8.1
