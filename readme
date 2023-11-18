@@ -1,0 +1,6 @@
+Their is a parameter in TrainModel.py called "per_device_train_batch_size". If you run out of memory during training.
+Lower that number. If you have extra memory, you can increase it.
+The higher it is the faster the training, unless you run out of memory, then it will be very slow.
+
+Some Texts were provided in the "Texts" folder to test training. You can add your own texts to that folder and train on them.
+You may have to restart the program to see the new model.

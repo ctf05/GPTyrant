@@ -29,9 +29,9 @@ def train_gpt2_model(text_file_path):
         output_dir=output_dir,
         overwrite_output_dir=True,
         num_train_epochs=3,
-        per_device_train_batch_size=4,
-        save_steps=10_000,
-        save_total_limit=2,
+        per_device_train_batch_size=4, #My GPU has 8gb of VRAM and can handle up to 20
+        save_steps=1e6,
+        save_total_limit=None,
     )
 
     trainer = Trainer(
@@ -44,3 +44,8 @@ def train_gpt2_model(text_file_path):
     trainer.train()
 
     model.save_pretrained(output_dir)
+    tokenizer.save_pretrained(output_dir)
+
+    for file in os.listdir("Texts"):
+        if "cached" in file:
+            os.remove(os.path.join("Texts", file))
